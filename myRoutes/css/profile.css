@@ -1,0 +1,28 @@
+.element {
+    font-size: 16px;
+}
+
+.inline {
+    display: inline-block;
+    margin-left: 1.25em;
+}
+
+.info-label {
+    color: #5AC071;
+    margin-right: 2px;
+}
+
+#logout {
+    margin-top: 20px;
+}
+
+.route-label {
+    color: #5AC071;
+    margin-right: 5px;
+}
+
+.route {
+    border: 1px solid  #ccc;
+    padding: 1.25em 0 1.25em 0;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,55 @@
+<div>
+    <div class="content-title">{{ title }}</div>
+
+    <h4 class="section-title">Mappa itinerario</h4>
+
+    <div class="description">
+        Scegli il tuo itinerario di viaggio e salvalo per poterlo riutilizzare in ogni occasione.
+    </div>
+
+    <div class="columnsContainer">
+        <div id="map" class="left-column"></div>
+
+        <div class="right-column">
+            <form>
+                <div class="form-group">
+                    <label for="origin-input">Partenza</label>
+                    <input id="origin-input" class="form-control" type="text" placeholder="Piazza Castello...">
+                </div>
+
+                <div class="form-group">
+                    <label for="destination-input">Arrivo</label>
+                    <input id="destination-input" class="form-control" type="text" placeholder="via Garibaldi...">
+                </div>
+
+                <div class="form-group">
+                    <label for="mode-selector">Come viaggi:</label>
+                    <select id="mode-selector" class="c-select form-control">
+                        <option value="walking" selected>A piedi</option>
+                        <option value="transit">Trasporto pubblico</option>
+                        <option value="driving">Auto</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="name-input">Nome itinerario</label>
+                    <input data-ng-model="route.name" id="name-input" class="form-control" type="text" placeholder="Il mio viaggio a...">
+                </div>
+
+                <div class="form-group">
+                    <label for="total">Distanza</label>
+                    <div id="total" class="form-control-static">{{ route.total }} Km</div>
+                </div>
+
+                <div>
+                    <button id="calculate" type="button" class="btn btn-primary" data-ng-click="calcola()">Calcola</button>
+                    <button id="save" type="button" class="btn btn-success" data-ng-click="save()">Salva</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

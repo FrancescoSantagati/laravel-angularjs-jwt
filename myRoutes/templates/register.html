@@ -1,0 +1,50 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form name="form" data-ng-submit="register()" role="form">
+
+        <div class="form-group" data-ng-class="{ 'has-error': errors.email.length > 0 }">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" class="form-control" data-ng-model="registerData.email" required />
+            <div class="element help-block">
+                <div data-ng-repeat="error in errors.email" class="inline">{{ error }}</div>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-class="{ 'has-error': errors.username.length > 0 }">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" data-ng-model="registerData.username" required />
+            <div class="element help-block">
+                <div data-ng-repeat="error in errors.username" class="inline">{{ error }}</div>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-class="{ 'has-error': errors.password.length > 0 }">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" data-ng-model="registerData.password" required />
+            <div class="element help-block">
+                <div data-ng-repeat="error in errors.password" class="inline">{{ error }}</div>
+            </div>
+        </div>
+
+        <div class="form-group" data-ng-class="{ 'has-error': registerData.password_confirmation.error }">
+            <label for="password_confirmation">Password Confirmation</label>
+            <input type="password" name="password_confirmation" id="password_confirmation" class="form-control" data-ng-model="registerData.password_confirmation" required />
+        </div>
+
+        <div class="form-group">
+            <label for="firstname">First name</label>
+            <input type="text" name="firstname" id="firstname" class="form-control" data-ng-model="registerData.firstname" />
+        </div>
+
+        <div class="form-group">
+            <label for="lastname">Last name</label>
+            <input type="text" name="lastName" id="lastname" class="form-control" data-ng-model="registerData.lastname" />
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" data-ng-disabled="form.$invalid || isDataLoading" class="btn btn-primary">Register</button>
+            <img data-ng-if="isDataLoading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+            <a href="#/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>

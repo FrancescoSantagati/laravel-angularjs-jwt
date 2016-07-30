@@ -1,0 +1,40 @@
+.description {
+    margin: 10px 0 10px 0;
+}
+
+#map {
+    height: 400px;
+}
+
+#mode-selector {
+    color: #fff;
+    background-color: #4d90fe;
+    padding: 5px 11px 5px 11px;
+}
+
+.columnsContainer {
+    position: relative;
+    /*margin: .5em;*/
+}
+
+.left-column, .right-column {
+    border: 1px solid  #ccc;
+    padding: 1.25em;
+}
+
+.left-column {
+    margin-bottom: .5em;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 47.5em ) {
+    .left-column {
+        margin-right: 19.5em;
+    }
+    .right-column {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 18.75em;
+    }
+}

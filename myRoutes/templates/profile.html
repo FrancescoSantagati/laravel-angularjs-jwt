@@ -1,0 +1,55 @@
+<div>
+    <div class="content-title">{{ title }}</div>
+
+    <div>
+        <h4 class="section-title">Dati account</h4>
+
+        <div class="element">
+            <span class="info-label">Username:</span> {{user.username}}
+        </div>
+        <div class="element">
+            <span class="info-label">Email:</span> {{user.email}}
+        </div>
+        <div class="element">
+            <span class="info-label">Nome:</span> {{user.first_name || "--"}}
+        </div>
+        <div class="element">
+            <span class="info-label">Cognome:</span> {{user.last_name || "--"}}
+        </div>
+        <div class="element">
+            <span class="info-label">Iscritto dal:</span> {{user.created_at}}
+        </div>
+
+    </div>
+
+    <div>
+        <h4 class="section-title">Itinerari</h4>
+
+        <div data-ng-repeat="route in user.routes" class="route" data-ng-show="user.routes.length > 0">
+            <div class="element">
+                <div class="inline"><span class="route-label">Itinerario:</span> {{route.name || "Senza nome"}}</div>
+            </div>
+            <div class="element">
+                <div class="inline"><span class="route-label">Total:</span> {{route.total}} Km</div>
+                <div class="inline"><span class="route-label">Come viaggi: </span>
+                    <span data-ng-switch data-on="route.travel_mode">
+                        <span ng-switch-when="WALKING">A piedi</span>
+                        <span ng-switch-when="TRANSIT">Trasporto pubblico</span>
+                        <span ng-switch-when="DRIVING">Auto</span>
+                    </span>
+                </div>
+            </div>
+            <div class="element">
+                <div class="inline"><span class="route-label">Da:</span> {{route.origin_place_name}}</div>
+                <div class="inline"><span class="route-label">A:</span> {{route.destination_place_name}}</div>
+            </div>
+        </div>
+
+        <div class="element" data-ng-show="user.routes.length == 0">
+            <div class="inline"> Non hai nessun itinerario salvato.</div>
+        </div>
+    </div>
+
+    <button id="logout" type="button" class="btn btn-primary" data-ng-click="logout()">Logout</button>
+
+</div>

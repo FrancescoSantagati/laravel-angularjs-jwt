@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+}
+
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+}
+
+.logo {
+    font-size: 50px;
+}
+
+/* HEADER */
+.navbar {
+    background-color: #393939;
+    padding: 0;
+    margin: auto;
+}
+
+.navbar-btn {
+    margin-left: 15px;
+}
+
+/* MAIN CONTENT */
+
+.wrap {
+    min-height: 100%;
+    /* Negative indent footer by its height */
+    margin-bottom: -80px;
+     /*Pad bottom by footer height */
+    padding: 0 0 80px;
+}
+
+.wrap:after {
+    content: "";
+    display: block;
+}
+
+.main-content {
+    padding-top: 15px;
+}
+
+.section-title {
+    margin-top: 30px;
+    color: #E27272;
+}
+
+.content-title {
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+
+.wrap:after .footer {
+    height: 80px;
+}
+
+.footer {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* LOADER */
+
+.spinner {
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+    margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #333;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+    0%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 50% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+
+/* MESSAGE BAR */
+
+.message-bar-container {
+    height: 30px;
+}
+
+.info-bar {
+    background-color: #92D1FF;
+    padding: 8px 30px 8px 30px;
+    color: #fff;
+}
+
+.error-bar {
+    background-color: #ff9292;
+    padding: 8px 30px 8px 30px;
+    color: #fff;
+}
+
+/* FORM */
+
+.form-group .help-block {
+    /*display: none;*/
+}
+
+.form-group.has-error .help-block {
+    /*display: block;*/
+}
