@@ -1,5 +1,5 @@
 Laravel + AngularJS + JWT Auth
 ----
 
-Server: app
+Server: app  
 Client: myRoutes
